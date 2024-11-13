@@ -27,3 +27,47 @@ body {
   margin: 0;
   font-family: sans-serif;
 }
+
+.icon-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  z-index: 1;
+}
+@media screen and (width>768px) {
+  .icon-menu {
+    display: none;
+  }
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: pink;
+  text-align: center;
+  translate: 100% -100%;
+  transition: translate 0.3s;
+}
+.menu-show {
+  translate: 0;
+}
+@media screen and (width>768px) {
+  .menu {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 100px;
+    translate: 0;
+  }
+}
+.menu-item {
+  border-bottom: 1px solid fuchsia;
+  line-height: 50px;
+}
+@media screen and (width>768px) {
+  .menu-item {
+    border-bottom: 5px solid fuchsia;
+  }
+}
